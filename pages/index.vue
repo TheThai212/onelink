@@ -1,4 +1,6 @@
 <template>
+  <Analytics />
+
   <div class="h-screen grid grid-cols-3 divide-x">
     <div class="col-span-2 h-screen flex flex-col bg-slate-100">
       <div class="flex-1 overflow-y-auto p-8">
@@ -59,6 +61,7 @@
 </template>
 
 <script setup>
+import { Analytics } from '@vercel/analytics/vue';
 import { encodeData } from "../utils/transformer";
 const data = ref({
   n: "",
@@ -78,8 +81,8 @@ const data = ref({
 
 const prefillDemoData = () => {
   data.value = {
-    n: "John Snow",
-    d: "I’m John Snow, the king in the north. I know Nothing.",
+    n: "Thế Thái",
+    d: "Hè lô",
     i: "https://i.insider.com/56743fad72f2c12a008b6cc0",
     f: "https://www.facebook.com/john_snow",
     t: "https://twitter.com/john_snow",
