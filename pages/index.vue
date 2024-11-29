@@ -1,5 +1,6 @@
 <template>
   <Analytics />
+  <SpeedInsights />
 
   <div class="h-screen grid grid-cols-3 divide-x">
     <div class="col-span-2 h-screen flex flex-col bg-slate-100">
@@ -61,6 +62,7 @@
 </template>
 
 <script setup>
+import { SpeedInsights } from '@vercel/speed-insights/vue';
 import { Analytics } from '@vercel/analytics/vue';
 import { encodeData } from "../utils/transformer";
 const data = ref({
